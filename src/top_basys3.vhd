@@ -61,7 +61,27 @@ architecture top_basys3_arch of top_basys3 is
   
 begin
 	-- PORT MAPS --------------------
+   ripple_adder_inst : ripple_adder
+   port map
+   (  Cin   => sw(0),
    
+      A(0)  => sw(1),
+      A(1)  => sw(2),
+      A(3)  => sw(3),
+      A(3)  => sw(3),
+
+      B(0)  => sw(1),
+      B(1)  => sw(2),
+      B(3)  => sw(3),
+      B(3)  => sw(3),      
+
+      S(0)  => led(0),
+      S(1)  => led(1),
+      S(2)  => led(2),
+      S(3)  => led(3),    
+      
+      Cout  => led(15)
+    );
 	---------------------------------
 	
 	-- CONCURRENT STATEMENTS --------
